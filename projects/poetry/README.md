@@ -1,3 +1,2 @@
 - A spot to learn poetry. 
 - I will start off with this reading the docs: https://python-poetry.org/docs/
--testing to see if I change user.email git"
