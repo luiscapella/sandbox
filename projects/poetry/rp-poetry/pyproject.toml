@@ -6,6 +6,7 @@ authors = ["CAPEL010 <Luis.E.Capella@disney.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+requests = "^2.27.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
