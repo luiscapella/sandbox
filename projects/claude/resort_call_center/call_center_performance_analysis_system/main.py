@@ -16,6 +16,7 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "analysis"))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "insights"))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "data"))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "reports"))
 
 
 def cmd_generate():
@@ -42,11 +43,17 @@ def cmd_playbook():
     generate_playbooks.generate()
 
 
+def cmd_report():
+    import generate_reports
+    generate_reports.build_report()
+
+
 COMMANDS = {
     "generate": cmd_generate,
     "analyze":  cmd_analyze,
     "compare":  cmd_compare,
     "playbook": cmd_playbook,
+    "report":   cmd_report,
 }
 
 
@@ -59,6 +66,7 @@ def main():
         cmd_analyze()
         cmd_compare()
         cmd_playbook()
+        cmd_report()
     elif arg in COMMANDS:
         COMMANDS[arg]()
     else:
